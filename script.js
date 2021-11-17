@@ -109,6 +109,36 @@ function E() {
   console.log(calculator);
   update()
 }
+function Sqrt() {
+  calculator = calculator + "√(";
+  console.log(calculator);
+  update()
+}
+function Log() {
+  calculator = calculator + "L(";
+  console.log(calculator);
+  update()
+}
+function Ln() {
+  calculator = calculator + "n(";
+  console.log(calculator);
+  update()
+}
+function Sin() {
+  calculator = calculator + "s(";
+  console.log(calculator);
+  update()
+}
+function Cos() {
+  calculator = calculator + "c(";
+  console.log(calculator);
+  update()
+}
+function Tan() {
+  calculator = calculator + "t(";
+  console.log(calculator);
+  update()
+}
 function Equals() {
   var r1, constants;
   constants = ["π","e"];
@@ -121,6 +151,18 @@ function Equals() {
       }
     } else if (calculator[i] == "^") {
       r1 += "**";
+    } else if (calculator[i] == "√") {
+      r1 += "Math.sqrt";
+    } else if (calculator[i] == "L") {
+      r1 += "Math.log10";
+    } else if (calculator[i] == "n") {
+      r1 += "Math.log";
+    } else if (calculator[i] == "s") {
+      r1 += "Math.sin";
+    } else if (calculator[i] == "c") {
+      r1 += "Math.cos";
+    } else if (calculator[i] == "t") {
+      r1 += "Math.tan";
     } else {
       r1 += String(calculator[i]);
     }
